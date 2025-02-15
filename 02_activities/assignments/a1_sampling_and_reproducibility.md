@@ -15,6 +15,33 @@ Alter the code so that it is reproducible. Describe the changes you made to the 
 ```
 Please write your explanation here...
 
+Q1:
+    Stages of sampling:
+        - Simple random sampling for infecting a random set of people: "infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)" the code combines wedding and brunches and infects 10% of the total population, it does not distinguish between events. 
+            Sampling frame: everyone at the events (1000)
+            Sampling size: 10%
+            How it relates to blog post: it's slightly different from blogpost I think? Because it's 10% infection rate of entire population instead of 10% of weddings and 10% of brunches
+        - Simple random sampling for deciding which infected people get traced: " ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS", again everyone within the infected population have the same chance of being traced regardless of events.
+            Sampling frame: infected population
+            Sampling size: 20%
+            How it relates to blog post: infections have a 20% of tracing rate
+        - Multi-stage sampling? for determining who gets traced: 
+            "event_trace_counts = ppl[ppl['traced'] == True]['event'].value_counts()
+            events_traced = event_trace_counts[event_trace_counts >= SECONDARY_TRACE_THRESHOLD].index
+            ppl.loc[ppl['event'].isin(events_traced) & ppl['infected'], 'traced'] = True"
+
+            Sampling frame: traced population
+            Sampling size: all of traced population
+            How it relates to blog post: If 2 or more people are traced to the same event, then everyone infected in that event who is infected are considered 'traced'
+Q2: 
+It doesn't match the blog post graph (true vs observed), it has a lower observed (traced) rate to weddings than the blog post. I think it might be because it applied 10% infection rate over the entire sample instead of the events separately. In the blog post, none of the brunch event would undergo a secondary tracing because there's only 1 person traced to each event, leading to higher observed rate from weddings. This is not a restriction in the code. Is this observation correct?
+
+Q3:
+Reproducibility is low, the observations change between simulations and do not always concentrate around the same centre due to the decrease in simulations numbers.
+
+Q4:
+Added np.random.seed(10) on line 19 for reproducibility
+
 ```
 
 

@@ -40,30 +40,37 @@ For the **Canadian General Social Survey on Giving, Volunteering, and Participat
 
 ## Part A - Survey Design: 
 
-The number of your chosen topic: `#`
+The number of your chosen topic: #1
 
 Describe the purpose of your survey:
 ```
 write your answer here...
+
+To understand why the turnover rate is high within the entry and lower-level positions and what changes need to occur to improve employee satisfaction.
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
 write your answer here...
+
+Target population: employees in entry and lower level positions
+Sampling frame: employees in entry and lower level positions within the highest turnover rate department
+Sampling units: employees in that department who are willing to take a survey
+Observational units: employees who submitted the survey
 ```
 
 Your 5-10 question survey:
 ```
 1. write your question here...
+    On a level of 1-10, what is your current overall satifaction rate
 2. write your question here...
+    Do you feel underwelmed, overwelmed or just right with your work load
 3. write your question here...
+    How closely does the position match what you expected from your interview
 4. write your question here...
+    How would you rate the availability of your supervisor/seniors for support
 5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+    What is the dollar difference between what you're paid now vs what you think you should be paid for the position (based on experience level, geographic location, etc)
 ```
 
 ## Part B - Survey Evaluation:
@@ -72,6 +79,20 @@ Identify and describe survey features:
 
 ```
 write your answer here
+
+1. Sample type: Convenience sampling
+2. Sample size: 16,149 people
+3. Target population: Candians aged 15 or above who volunteer in some form
+4. Sampling frame: Target population with internet or phone access as it is available as an internet survey, who live in provinces (not territories), individuals are 15+ and live in independent households
+5. Survey mode(s): Online questionnaire or telephone
+6. Timeline: sept-dec 2018
+7. Response rate: Assuming it's 16,149 over 30,843,019 (as this is the weighted frequency)
+8. Weights: overall sample size was weighted to account for non-response rate 30,843,019
+9. Data processing: answers are split into different categories with corresponding codes, for example, types of volunteering are clustered into different categories, respondants are categorized into appropriate categories based on age, and different codes are assigned based on answer types
+10. Cleaning, imputation, etc: any missing/incomplete data should be cleaned and excluded from analysis as some questions give respondants a skip option
+11. Sources of error: estimated hours, especially informal volunteering hours are hard to estimate and may be self-reported wrongly
+12. Limitations, known biases, etc: we're not accounting for those in territories, answers are self-reported so it may be possible that self reported answers may be higher than normal to establish a better social image. The sampling are conducted on a voluntary basis, so there may be underlying bias based on the types of people who are more likely to respond to surveys
+13. Link to documentation and any additional sources used:"https://www150.statcan.gc.ca/n1/pub/75-006-x/2021001/article/00002-eng.htm", "
 ```
 
 ## Rubric
